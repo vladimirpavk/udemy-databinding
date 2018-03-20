@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   
   <app-cockpit (onElementAdded)="added($event)"></app-cockpit>
   
@@ -13,4 +13,14 @@
   </div>
   
   
+</div>
+-->
+<div class="container">
+  <app-game-control (tick)="tickTack($event)"></app-game-control>
+  <div class="row" *ngFor="let ods of oddNumbers">
+    <app-odd [comp_number]="ods"></app-odd>
+  </div>
+  <div class="row" *ngFor="let evens of evenNumbers">
+      <app-even [comp_number]="evens"></app-even>
+    </div>
 </div>
