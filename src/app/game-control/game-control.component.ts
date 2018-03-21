@@ -19,7 +19,7 @@ export class GameControlComponent implements OnInit {
   onStartButtonClicked(){
     if(this.ref===0)
     {
-      this.ref=setInterval(
+      this.ref=window.setInterval(
         ()=>{
           this.tick.emit(this.tickCount++);
       }, 1000);
